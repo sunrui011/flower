@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="京东.css">
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
+</head>
+
+<body>
+    <!-- 最上边导航 -->
+    <div id="top-nav">
+        <div id="nav">
+            <div id="nav-left">
+                <i id="map" class="iconfont">&#xe641</i>
+                <a href="#">陕西</a>
+            </div>
+            <div id="nav-right">
+                <ul>
+                    <li><a href="#">你好，请登录 <span id="mianfeizhuce">免费注册</span></a></li>
+                    <li><a href="#">我的订单</a></li>
+                    <li><a href="#">我的京东<i id="arrow" class="iconfont">&#xe658</i> </a></li>
+                    <li><a href="#">京东会员</a></li>
+                    <li class="qiyecaigou"><a id="qiyecaigou" style="color: #f00;" href="#">企业采购
+                            <i style="color: #999;" class="iconfont">&#xe658</i></a></li>
+                    <li>客户服务<i id="arrow" class="iconfont">&#xe658</i> </li>
+                    <li class="wangzhandaohang">网站导航<i id="arrow" class="iconfont">&#xe658</i></li>
+                    <li>手机京东</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- logo行 -->
+    <div id="logo-container">
+        <div id="logo-content">
+            <div id="logo-picture">
+                <img src="logo.png" alt="logo">
+            </div>
+            <div id="logo-rightPicture">
+                <img src="picture1.gif" alt="picture1">
+            </div>
+            <div id="logo-middleContent">
+                <div id="logo-sousuokuang">
+                    <input type="text" value="请搜索...">
+                    <!-- <div id="fangdajing-container">
+                      <i id="fangdajing" class="iconfont">&#xe63c</i>
+                    </div> -->
+                </div>
+                <div id="logo-smallWrite">
+                    <ul id="small-write">
+                        <li><a style="color: #e1251b;" href="#">智能巅峰日</a></li>
+                        <li><a href="#">超级大促</a></li>
+                        <li><a href="#">女性护理</a></li>
+                        <li><a href="#">爱茉莉</a></li>
+                        <li><a href="#">神券日</a></li>
+                        <li><a href="#">家装节</a></li>
+                        <li><a href="#">第2件5折</a></li>
+                        <li><a href="#">电脑数码</a></li>
+                        <li><a href="#">防疫物资</a></li>
+                    </ul>
+                </div><br>
+                <div id="logo-bigWrite">
+                    <ul>
+                        <li id="miaosha">秒杀</li>
+                        <li id="youhuiquan">优惠卷</li>
+                        <li>PLUS会员</li>
+                        <li>品牌闪购</li>
+                        <li>拍卖</li>
+                        <li>京东家电</li>
+                        <li>京东超市</li>
+                        <li>京东生鲜</li>
+                        <li>京东国际</li>
+                        <li>京东金融</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 主内容区域 -->
+    <div id="content">
+        <div id="middle-content">
+
+            <div id="left-list">
+                <ul id="left-list-list">
+                    <li>家电用器</li>
+                    <li>手机/运营商/数码</li>
+                    <li>电脑/办公</li>
+                    <li>家居/家具/家装/厨具</li>
+                    <li>男装/女装/童装/内衣</li>
+                    <li>美妆/各户清洁/宠物</li>
+                    <li>女鞋/箱包/钟表/珠宝</li>
+                    <li>男鞋/运动/户外</li>
+                    <li>房产/汽车/汽车用品</li>
+                    <li>母婴/玩具器乐</li>
+                    <li>食品/酒类/生鲜/特产</li>
+                    <li>艺术/礼品鲜花/农资绿植</li>
+                    <li>医药保健/计生情趣</li>
+                    <li>图书/文娱/教育/电子书</li>
+                    <li>机票/酒店/旅游/生活</li>
+                    <li>理财/众筹/白条/保险</li>
+                    <li>安装/维修/清洁/二手</li>
+                    <li>工业品</li>
+                </ul>
+            </div>
+
+
+            <div id="big-picture">
+                <img class="active" src="images/1.png" alt="1">
+                <img src="images/2.png" alt="2">
+                <img src="images/3.png" alt="3">
+                <img src="images/4.png" alt="4">
+                <img src="images/5.png" alt="5">
+                <img src="images/6.png" alt="6">
+                <ul id="pointer">
+                    <li class="selected"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <span id="left"></span>
+                <span id="right"></span>
+            </div>
+            <script>
+                var oPointer = document.getElementById('pointer');
+                var aLi = oPointer.getElementsByTagName('li');
+                var oBigPicture = document.getElementById("big-picture");
+                var aImg = oBigPicture.getElementsByTagName('img');
+                for (var i = 0; i < aLi.length; i++) {
+                    aLi[i].index = i;
+                    aLi[i].onmouseover = function () {
+                        for (var j = 0; j < aLi.length; j++) {
+                            aLi[j].className = '';
+                            aImg[j].className = '';
+                        }
+                        this.className = 'selected';
+                        aImg[this.index].className = 'active';
+                    }
+                }
+                var tag = 0;
+                var oLeft = document.getElementById('left');
+                var oRight = document.getElementById('right');
+                oRight.onclick = function () {
+                    tag++;
+                    tag = tag > aLi.length - 1 ? 0 : tag;
+                    for (var i = 0; i < aLi.length; i++) {
+                        aLi[i].className = '';
+                        aImg[i].className = '';
+                    }
+                    aLi[tag].className = 'selected';
+                    aImg[tag].className = 'active';
+                }
+                oLeft.onclick = function () {
+                    tag--;
+                    tag = tag < 0 ? aLi.length - 1 : tag;
+                    for (var i = 0; i < aLi.length; i++) {
+                        aLi[i].className = '';
+                        aImg[i].className = '';
+                    }
+                    aLi[tag].className = 'selected';
+                    aImg[tag].className = 'active';
+                }
+                Timer = setInterval(function () {
+                    oRight.onclick();
+                }, 2000);
+                oBigPicture.onmouseover = function () {
+                    clearInterval(Timer);
+                };
+                oBigPicture.onmouseout = function () {
+                    Timer = setInterval(function () {
+                        oRight.onclick();
+                    }, 2000)
+                }
+            </script>
+
+
+            <div id="small-picture">
+                <img src="images/small-p1.png" alt="small-p1">
+                <img src="images/small-p2.png" alt="small-p2">
+                <img src="images/small-p3.png" alt="small-p3">
+            </div>
+
+            <div id="right-list">
+                <div id="right-list-first">
+                    <img src="images/9.png" alt="p9" style="margin-top: 10px;">
+                    <div id="right-list-first-write" style="float: left; margin-top: 10px; font-size: 12px;">
+                        Hi~欢迎逛京东！<br>登录&nbsp;|&nbsp;注册</div>
+                    <br><br><br>
+                    <span id="xinrenfuli"
+                        style="font-size: 12px; margin-top: -10px; margin-left: 40px; color: #fff;border-top: 50px;border-radius: 20%;">新人福利</span>
+                    <span id="huiyuan" style="font-size: 12px; color: #fff;">PLUS会员</span>
+                </div>
+                <div id="line"
+                    style="width: 150px;height: 1px; margin: 0 auto; margin-top: -10px;margin-bottom: 5px; background-color: #ccc; opacity: 0.5;">
+                </div>
+                <div id="right-list-second">
+                    <div style="font-weight: 900; margin-left: 15px;">京东快报</div>
+                    <ul id="right-list-second-write" style="font-size: 13px;">
+                        <li style="margin-top: 5px;color: #666;"><span
+                                style="background-color: rgb(243, 222, 226);color: #f7653c;">推荐</span> 票友圈装优雅不叫真...</li>
+                        <li style="margin-top: 5px;color: #666;"><span
+                                style="background-color: rgb(243, 222, 226); color: #f7653c;">推荐</span> vivo z5x评测：肆意...
+                        </li>
+                        <li style="margin-top: 5px;color: #666;"><span
+                                style="background-color: rgb(243, 222, 226);color: #f7653c;">热议</span> 营养美味滋润于心，...</li>
+                        <li style="margin-top: 5px;color: #666;"><span
+                                style="background-color: rgb(243, 222, 226);color: #f7653c;">热评</span> 三星Fold：折叠屏体...
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="line2"
+                    style="width: 150px;height: 1px; margin: 0 auto; margin-top: 105px; background-color: #ccc; opacity: 0.5;">
+                </div>
+
+
+                <div id="right-list-third" style="margin-top: 20px;position: absolute;">
+                    <div id="l1" style="float: left; margin-left: 20px;cursor: pointer;">
+                        <img src="images/right1.png" style="width: 28px;" alt=""><br>
+                        <span style="font-size: 12px;color: #333;">话费</span>
+                    </div>
+                    <div id="l2" style="float: left; margin-left: 30px;cursor: pointer;">
+                        <img src="images/right2.png" style="width: 28px;" alt=""><br>
+                        <span style="font-size: 12px;color: #333;">机票</span>
+                    </div>
+                    <div id="l3" style="float: left; margin-left: 30px;cursor: pointer;">
+                        <img src="images/right3.png" style="width: 28px;" alt=""><br>
+                        <span style="font-size: 12px;color: #333;">酒店</span>
+                    </div><br><br>
+
+                    <div id="l4" style="float: left;margin-left: 20px;cursor: pointer;">
+                        <img src="images/right4.png" style="width: 28px;" alt=""><br>
+                        <span style="font-size: 12px;color: #333;">游戏</span>
+                    </div>
+                    <div id="l5" style="float: left; margin-left: 30px;cursor: pointer;">
+                        <img src="images/right5.png" style="width: 28px;" alt=""><br>
+                        <span style="font-size: 12px;color: #333;">加油卡</span>
+                    </div>
+                    <div id="l6" style="float: left; margin-left: 20px;cursor: pointer;">
+                        <img src="images/right6.png" style="width: 28px;" alt=""><br>
+                        <span style="font-size: 12px;color: #333;">火车票</span>
+                    </div>
+
+
+                    <div id="l7" style="float: left; margin-left: 20px;cursor: pointer;">
+                        <img src="images/right7.png" style="width: 28px;" alt=""><br>
+                        <span style="font-size: 12px;color: #333;">众筹</span>
+                    </div>
+                    <div id="l8" style="float: left; margin-left: 30px;cursor: pointer;">
+                        <img src="images/right8.png" style="width: 28px;" alt=""><br>
+                        <span style="font-size: 12px;color: #333;">理财</span>
+                    </div>
+                    <div id="l9" style="float: left; margin-left: 30px;cursor: pointer;">
+                        <img src="images/right9.png" style="width: 28px;" alt=""><br>
+                        <span style="font-size: 12px;color: #333;">白条</span>
+                    </div>
+
+                    <div id="l10" style="float: left; margin-left: 20px;cursor: pointer;">
+                        <img src="images/right10.png" style="width: 28px;" alt=""><br>
+                        <span style="font-size: 12px;color: #333;">电影票</span>
+                    </div>
+                    <div id="l11" style="float: left; margin-left: 20px;cursor: pointer;">
+                        <img src="images/right11.png" style="width: 28px;" alt=""><br>
+                        <span style="font-size: 12px;color: #333;">企业购</span>
+                    </div>
+                    <div id="l12" style="float: left;margin-left: 20px;cursor: pointer;">
+                        <img src="images/right12.png" style="width: 28px;" alt=""><br>
+                        <span style="font-size: 12px;color: #333;">礼品卡</span>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- 秒杀行 -->
+    <div id="miaosha-container">
+        <div id="miaosha-p1">
+            <a href="#"><img src="images/15.png" alt=""></a>
+        </div>
+        <div class="miaosha-p">
+            <a href="#"><img src="images/16.png" alt=""></a>
+            <div id="w-1">100%纯棉 夏季新款潮流男..</div>
+            <div class="price">
+                <span class="w-2">&1189.00</span>&nbsp;<span class="w-3"><del>&1499.00</del></span>
+            </div>
+        </div>
+        <div class="miaosha-p">
+            <a href="#"><img src="images/11.png" alt=""></a>
+            <div id="w-1">热卖推荐酒玻酵母面膜...</div>
+            <div class="price">
+                <span class="w-2">&1299.00</span>&nbsp;<span class="w-3"><del>&1799.00</del></span>
+            </div>
+        </div>
+        <div class="miaosha-p">
+            <a href="#"><img src="images/12.png" alt=""></a>
+            <div id="w-1">微星(msi)GF63 15.6英寸轻...</div>
+            <div class="price">
+                <span class="w-2">&88.80</span>&nbsp;&nbsp;<span class="w-3"><del>&158.80</del></span>
+            </div>
+        </div>
+        <div class="miaosha-p">
+            <a href="#"><img src="images/13.png" alt=""></a>
+            <div id="w-1">潘蕾RS580/RX590 8G GD..</div>
+            <div class="price">
+                <span class="w-2">&239.00</span>&nbsp;&nbsp;<span class="w-3"><del>&319.00</del></span>
+            </div>
+        </div>
+        <div class="miaosha-p">
+            <a href="#"><img src="images/14.png" alt=""></a>
+            <div id="w-1">部分每满1000减150元...</div>
+            <div class="price">
+                <span class="w-2">&1889.00</span>&nbsp;<span class="w-3"><del>&2499.00</del></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

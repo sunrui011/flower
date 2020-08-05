@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            perspective: 800px;
+        }
+        .cub{
+            width: 300px;
+            height: 300px;
+            margin: 300px auto;
+            transform-style: preserve-3d;
+            /* transform: rotateX(145deg) rotateZ(145deg); */
+            animation: sijia 10s linear infinite;
+        } 
+        .cub>div>img {
+            width: 300px;
+            height: 300px;
+            opacity: 0.9;
+           position: absolute;
+        }
+        img{
+            vertical-align: top;
+        }
+        #demo1{
+            transform: rotateY(90deg) translateZ(150px);
+        }
+        #demo2{
+            transform: rotateY(90deg) translateZ(-150px);
+        }
+        #demo3{
+            transform: rotateX(90deg) translateZ(0px) translateY(-150px);
+        }
+        #demo4{
+            transform: rotateX(-90deg) translateZ(300px) translateY(-150px);
+        }
+        #demo5{
+            transform: rotateY(180deg) translateZ(150px);
+        }
+        #demo6{
+            transform: rotateY(0deg) translateZ(150px);
+        }
+        @keyframes sijia{
+            from{
+                transform:rotateX(0) rotateZ(0);
+            }
+            to{
+                transform:rotateX(1turn) rotateZ(1turn);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cub">
+        <div id="demo1">
+            <img src="11.jpg">
+        </div>
+        <div id="demo2">
+            <img src="12.jpg">
+        </div>
+         <div id="demo3">
+            <img src="13.jpg">
+        </div>
+        <div id="demo4">
+            <img src="14.jpg">
+        </div>
+        <div id="demo5">
+            <img src="15.jpg">
+        </div>
+        <div id="demo6">
+            <img src="16.jpg">
+        </div> 
+    </div>
+</body>
+</html>
