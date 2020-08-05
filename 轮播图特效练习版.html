@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #container{
+            width: 1130px;
+            margin: 100px auto;
+            position: relative;
+        }
+        #container > #swiper >img{
+            display: none;
+            width: 1130px;
+            height: 500px;
+            animation: sunrui 2s;
+        }
+        #container > #swiper .active{
+            display: block;
+        }
+        #container > #menu .selected{
+            background-color: slateblue;
+            color: #fff;
+        }
+        #container > #menu{
+            position: absolute;
+            right: 30px;
+            bottom: 30px;
+        }
+        #container > #menu > li{
+            list-style: none;
+            width: 22px;
+            height: 22px;
+            line-height: 22px;
+            text-align: center;
+            background-color: salmon;
+            float: left;
+            margin-right: 5px;
+            border-radius: 50%;
+            font-size: small;
+            cursor: pointer;
+        }
+        #container > #left,#right{
+            display: inline-block;
+            height: 50px;
+            width: 50px;
+            background-color: rgba(0,0,0,0.6);
+            position: absolute;
+            top: 250px;
+            margin-top: -25px;
+            cursor: pointer;
+        }
+        #container > #left{
+            left: 30px;
+        }
+        #container > #right{
+            right: 30px;
+        }
+        #container > #left::after{
+            content: '';
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-left: 5px solid #fff;
+            border-bottom: 5px solid #fff;
+            transform: rotate(45deg);
+            position: absolute;
+            top: 10px;
+            left: 15px;
+        }
+        #container > #right::after{
+            content: '';
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-top: 5px solid #fff;
+            border-right: 5px solid #fff;
+            transform: rotate(45deg);
+            position: absolute;
+            top: 10px;
+            right: 15px;
+        }
+        @keyframes sunrui{
+            0%{
+                opacity: 0;
+            }
+            50%{
+                opacity: 0.5;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="swiper">
+            <img class="active" src="images/picture1.png" alt="">
+            <img src="images/picture2.jpg" alt="">
+            <img src="images/picture3.png" alt="">
+            <img src="images/picture4.jpg" alt="">
+            <img src="images/picture5.png" alt="">
+            <img src="images/picture6.png" alt="">
+        </div>
+        <ul id="menu">
+            <li class="selected">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+        </ul>
+        <span id="left"></span>
+        <span id="right"></span>
+    </div>
+    <script>
+        var oMenu = document.getElementById('menu');
+        var aLi = oMenu.getElementsByTagName('li');
+        var oSwiper = document.getElementById('swiper');
+        var aImg = oSwiper.getElementsByTagName('img');
+        for(var i = 0;i<aLi.length;i++){
+            aLi[i].index = i;
+            aLi[i].onclick = function(){
+                for(var j = 0;j<aLi.length;j++){
+                    aLi[j].className = '';
+                    aImg[j].className = '';
+                }
+                this.className = 'selected';
+                aImg[this.index].className = 'active';
+            }
+        }
+        var tag = 0;
+        var oLeft = document.getElementById('left');
+        var oRight = document.getElementById('right');
+        oRight.onclick = function(){
+            tag++;
+            tag = tag > aLi.length - 1?0:tag;
+            for(var i = 0;i<aLi.length;i++){
+                aLi[i].className = '';
+                aImg[i].className = '';
+            }
+            aLi[tag].className = 'selected';
+            aImg[tag].className = 'active';
+        }
+        oLeft.onclick = function(){
+            tag--;
+            tag = tag < 0?aLi.length - 1:tag;
+            for(var i = 0;i<aLi.length;i++){
+                aLi[i].className = '';
+                aImg[i].className = '';
+            }
+            aLi[tag].className = 'selected';
+            aImg[tag].className = 'active';
+        }
+        var Timer = setInterval(function(){
+            oRight.onclick();
+        },2000);
+        var oContainer = document.getElementById('container');
+        oContainer.onmouseover = function(){
+            clearInterval(Timer);
+        }
+        oContainer.onmouseout = function(){
+            Timer = setInterval(function(){
+                oRight.onclick();
+            },2000);
+        }
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
