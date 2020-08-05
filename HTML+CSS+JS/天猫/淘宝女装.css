@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* 导航栏 */
+#nav{
+    height: 36px;
+    width: 100%;
+    background-color: #f5f5f5;
+}
+#nav-middle{
+    height: 36px;
+    width: 1190px;
+    background-color: #f5f5f5;
+    margin: 0 auto;
+    line-height: 36px;
+    text-align: center;
+}
+#middle-left-menu,#middle-right-menu > li{
+    list-style: none;
+    font-size: 13px;
+    color: #6c6c6c;
+    float: left;
+    margin-right: 25px;
+    cursor: pointer;
+}
+#middle-left-menu{
+    float: left;
+}
+#middle-right-menu{
+    float: right;
+}
+#middle-left-menu > li{
+    float: left;
+    margin-right: 25px;
+}
+#middle-left-menu :first-child{
+    color: #f22e00;
+}
+#middle-left-menu > li:hover{
+    color: #f22e00;
+}
+#middle-right-menu > li:hover{
+    color: #f22e00;
+}
+/* logo栏 */
+#logo{
+    height: 65px;
+    width: 100%;
+    background-color: #fff;
+}
+#logo-middle{
+    height: 65px;
+    width: 1190px;
+    background-color: #fff;
+    margin: 0 auto;
+}
+#middle-left-picture > img{
+    width: 140px;
+    height: 45px;
+    margin-top: 10px;
+}
+#sousuo-left :first-child{
+    display: inline-block;
+    height: 31px;
+    width: 439px;
+    border: 2px solid #f22e00;
+    position: absolute;
+    top: -40px;
+    left: 530px;
+    color: #666;
+    font-size: 12px;
+    line-height: 31px;
+    position: relative;
+}
+#sousuo-left :last-child{
+    display: inline-block;
+    height: 35px;
+    width: 80px;
+    background-color: #f82800;
+    font-size: 14px;
+    color: #fff;
+    line-height: 35px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    top: -40px;
+    left: 970px;
+}
+#sousuo-right{
+    height: 35px;
+    width: 80px;
+    background-color: #fff0e7;
+    color: #f82800;
+    line-height: 35px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    top: -40px;
+    left: 1055px;
+    cursor: pointer;
+}
+#middle-right-sousuo{
+    position: relative;
+}
+#sousuo-left{
+    position: relative;
+}
+/* 首页行 */
+#shouye-line{
+    height: 37px;
+    width: 100%;
+    background-color: #fff;
+    margin-top: 10px;
+}
+#shouye-middle{
+    height: 37px;
+    width: 1190px;
+    background-color: #fff;
+    margin: 0 auto;
+    line-height: 37px;
+    text-align: center;
+    font-size: 14px;
+    color: #404040;
+    font-weight: bolder;
+}
+#shouye-middle-left{
+    float: left;
+    margin-left: 20px;
+}
+#shouye-middle-right{
+    float: right;
+    margin-right: 20px;
+}
+#arrow{
+    margin-left: 5px;
+    font-size: 14px;
+}
+/* line行 */
+#simple-line{
+    width: 100%;
+    height: 3px;
+    background-color: rgb(250, 7, 68);
+}
+/* 图片栏 */
+#picture-line{
+    height: 400px;
+    width: 100%;
+    margin-top: 1px;
+}
+#picture-middle-line{
+    width: 1190px;
+    height: 400px;
+    margin: 0 auto;
+}
+#one-line{
+    width: 380px;
+    height: 400px;
+    float: left;
+}
+#two-line{
+    height: 400px;
+    width: 190px;
+    float: left;
+    position: relative;
+}
+#two-line > :last-child{
+    position: absolute;
+    top: 200px;
+    left: 0px;
+}
+#three-line{
+    height: 400px;
+    width: 190px;
+    float: left;
+}
+#four-line{
+    height: 400px;
+    width: 190px;
+    float: left;
+}
+#five-line{
+    height: 400px;
+    width: 240px;
+    float: left;
+}
+/* 小图片栏 */
+#small-picture{
+    height: 295px;
+    width: 100%;
+}
+#small-picture-middle{
+    width: 1190px;
+    height: 295px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+#small-picture-middle > div{
+    width: 196px;
+    height: 295px;
+    float: left;
+    border: 1px solid rgb(236, 233, 233);
+    border-top: none;
+}
+#sec{
+    color: #000;
+    font-size: 14px;
+    margin-left: 60px;
+    margin-top: 25px;
+    font-weight: 600;
+}
+.sort-menu > li{
+    list-style: none;
+    color: #3c3c3c;
+    font-size: 12px;
+    float: left;
+    margin-right: 15px;
+    margin-top: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.pic > img{
+    margin-left: 48px;
+    margin-top: 20px;
+}
+.sort-menu > li:hover{
+    text-decoration: underline;
+}
+#sec:hover{
+    text-decoration: underline;
+}
+/* iFashion栏 */
+#iFashion{
+    width: 100%;
+    height: 85px;
+    margin-bottom: 20px;
+}
+#iFashion-middle{
+    height: 85px;
+    width: 1190px;
+    margin: 0 auto;
+    margin-top: 10px;
+}

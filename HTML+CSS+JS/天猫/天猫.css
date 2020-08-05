@@ -1,0 +1,546 @@
+/* 导航栏 */
+*{
+   padding: 0;
+   margin: 0;
+}
+#nav{
+    height: 33px;
+    background-color: #f2f2f2;
+}
+#nav-middle{
+    width: 1130px;
+    height: 33px;
+    background-color: #f2f2f2;
+    line-height: 33px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 12px;
+    color: rgb(131, 119, 119);
+}
+#left{
+    float: left;
+}
+#right{
+    float: right;
+}
+#left-menu,#right-menu > li{
+    list-style: none;
+    margin-right: 18px;
+    float: left;
+}
+#left-menu > li{
+    float: left;
+    margin-right: 18px;
+}
+#right-menu > li{
+    float: left;
+}
+#left-menu > .hover-1:hover{
+    color: #ff0036;
+    cursor: pointer;
+}
+#right-menu > .hover-1:hover{
+    color: #ff0036;
+    cursor: pointer;
+}
+#right-menu > li > .iconfont{
+    color: #ff0036;
+    font-size: 14px;
+}
+#right-menu > li >.display > a{
+    text-decoration: none;
+    color: rgb(107, 94, 94);
+    padding-left: 7px;
+    padding-right: 7px;
+    letter-spacing: 2px;
+}
+.display{
+    display: none;
+    background-color: #fff;
+}
+#wodetaobao-display{
+    position: absolute;
+    top: 30px;
+    left: 878px;
+}
+#wodetaobao > .display > a:hover{
+    color: #ff0036;
+}
+#shoucangjia-display{
+    position: absolute;
+    top: 30px;
+    left: 1000px;
+}
+#shoucangjia > .display > a:hover{
+    color: #ff0036;
+}
+/* 图片栏 */
+#big-picture{
+    background-color: #f40d4d;
+}
+#small-picture{
+    width: 1130px;
+    height: 70px;
+    margin: 0 auto;
+}
+#small-picture > img{
+    width: 100%;
+    height: 70px;
+}
+/* logo栏 */
+#logo{
+    height: 121px;
+    width: 100%;
+    background-color: #fff;
+}
+#logo-content{
+    width: 1130px;
+    height: 121px;
+    background-color: #fff;
+    margin: 0 auto;
+    position: relative;
+}
+#logo-picture{
+    position: absolute;
+    margin-top: 40px;
+}
+#sousuolan{
+    position: relative;
+    left: 300px;
+}
+#sousuo-top{
+    position: absolute;
+    top: 30px;
+}
+#sousuo-top-menu > li{
+    list-style: none;
+    font-size: 12px;
+    color: #3c3c3c;
+    float: left;
+    margin-right: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+#sousuo-top-menu{
+    position: relative;
+}
+#sousuo-bottom-menu > li{
+    list-style: none;
+    font-size: 12px;
+    color: #3c3c3c;
+    float: left;
+    margin-right: 5px;
+    cursor: pointer;
+}
+#sousuo-bottom{
+    position: absolute;
+    top: 94px;
+}
+#sousuo-middle{
+    position: relative;
+    top: 50px;
+    left: -15px;
+    
+}
+#sousuo-left{
+    display: inline-block;
+    height: 36px;
+    width: 554px;
+    border: 2px solid #ff4200;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-right: none;
+    position: relative;
+}
+#sousuo-right{
+    display: inline-block;
+    height: 36px;
+    width: 74px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    background-color: #ff4200;
+    /* background: linear-gradient(right,#ff4200,#ff9000); */
+    border: 2px solid #ff4200;
+
+    position: absolute;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    cursor: pointer;
+}
+#sousuo-top-menu > .zidai-color{
+    color: #ff4400;
+    position: relative;
+    left: 50px;
+}
+#sousuo-bottom-menu > .zidai-color{
+    color: #ff5000;
+}
+#sousuo-top-menu > #zidai-bc{
+    background-color: #ff5000;
+    color: #fff;
+    padding: 5px 5px 5px 5px;
+    border-radius: 2px;
+    opacity: 0.8;
+    position: absolute;
+    top: -5px;
+}
+#sousuo-middle > #sousuo-left > #photo{
+    position: absolute;
+    top: 10px;
+    left: 520px;
+    font-size: 22px;
+    color: #3c3c3c;
+}
+#sousuo-bottom-menu > li:hover{
+    color: #ff5000;
+}
+#sousuo-top-menu > .zidai-color:hover{
+    color: #ff5000;
+    font-size: 13px;
+}
+#sousuo-middle > #sousuo-left > #toumingzi{
+    font-size: 13px;
+    opacity: 0.5;
+    position: absolute;
+    top: 9px;
+    left: 10px;}
+  /* 主题市场行 */
+#navi{
+    height: 30px;
+    background-color: #f4f4f4;
+}
+#navi-middle{
+    height: 30px;
+    width: 1130px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #ff9000;
+    margin: 0 auto;
+    font-family: tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+}
+#navi-right-menu{
+    list-style: none;
+    font-size: 16px;
+    color: rgb(200, 221, 11);
+}
+#navi-left{
+    float: left;
+    width: 190px;
+    height: 30px;
+    background-color: #ff5000;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bolder;
+}
+#navi-right-menu > li{
+    color: #fff;
+    font-weight: bolder;
+    float: left;
+    padding-right: 10px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+#navi-right-menu > li:hover{
+    background-color: #fc7848;
+}
+/* 内容行 */
+#content{
+    height: 521px;
+    background-color: #f4f4f4;
+    width: 100%;
+}
+#content-middle{
+    width: 1130px;
+    background-color: aqua;
+    margin: 0 auto;
+}
+#content-middle > #content-left{
+    width: 189px;
+    height: 521px;
+    background-color: #fff;
+    float: left;
+    border: 1px solid #ff4200;
+}
+#content-middle > #content-middle-left{
+    width: 520px;
+    height: 521px;
+    background-color: #f4f4f4;
+    float: left;
+}
+#content-middle > #content-middle-right{
+    width: 160px;
+    height: 521px;
+    background-color: #f4f4f4;
+    float: left;
+}
+#content-right{
+    width: 235px;
+    height: 521px;
+    background-color: #f4f4f4;
+    float: left;
+    margin-top: 10px;
+}
+#content-left,#content-middle-left,#content-middle-right{
+    margin-right: 8px;
+}
+#content-left-menu > li{
+    list-style: none;
+    height: 32px;
+    line-height: 32px;
+    padding-left: 10px;
+    color: #666;
+    font-size: 14px;
+    cursor: pointer;
+    position: relative;
+}
+#content-left-menu > li > a{
+    margin-right: 7px;
+    margin-left: 7px;
+}
+#content-left-menu > li > a:hover{
+    text-decoration: underline;
+}
+#content-left-menu > li:hover{
+    background-color: #ffe4dc;
+    color: #ff5000;
+}
+#content-left-menu > li > i{
+    font-size: 12px;
+    position: absolute;
+    right: 5px;
+} 
+#content-middle-left{
+    position: relative;
+}
+#content-middle-left-top{
+    width: 520px;
+    height: 280px;
+    margin-top: 10px;
+    position: relative;
+}
+#content-middle-left-top > img{
+    display: none;
+}
+#content-menu > li{
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    float: left;
+    margin-right: 5px;
+}
+#content-middle-left-top > .active{
+    display: block;
+}
+#content-menu{
+    position: absolute;
+    right: 200px;
+    bottom: 250px;
+}
+#content-menu > .selected{
+    background-color: #ff4200;
+}
+#content-left-arrow,#content-right-arrow{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: #999;
+    position: absolute;
+    margin-top: -153px;
+}
+#content-left-arrow{
+    left: 5px;
+}
+#content-right-arrow{
+    right: 5px;
+}
+#content-left-arrow::after{
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid #fff;
+    border-left: 2px solid #fff;
+    transform: rotate(45deg);
+    position: absolute;
+    left: 8px;
+    top: 7px;
+}
+#content-right-arrow::after{
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 8px;
+    top: 7px;
+}
+#content-bottom-left{
+    float: left;margin-right: 40px;
+}
+#content-bottom-right{
+    float: left;
+}
+#content-middle-left-bottom{
+    margin-top: 25px;
+}
+#right-top{
+    margin-top: 10px;
+}
+#right-bottom{
+    margin-top:5px;
+}
+h6{
+    color: #a1a1a1;
+    font-weight: lighter;
+}
+#c-1{
+    position: relative;
+    height: 91px;
+}
+#cc-1 > img{
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 75px;
+    cursor: pointer;
+}
+#cc-2{
+    font-size: 12px;
+    color: #3c3c3c;
+    position: absolute;
+    top: 60px;
+    left: 75px;
+}
+#cc-3{
+    color: #ff5000;
+    font-size: 12px;
+    position: absolute;
+    top: 80px;
+    /* left: 30px; */
+}
+#cc-3 > span{
+    display: inline-block;
+    width: 102px;
+    height: 16.8px;
+    line-height: 16.8px;
+    text-align: center;
+    background-color: #ffe4db;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+#c-2{
+    height: 40px;
+    margin-left: 5px;
+}
+#c-2 > span{
+    display: inline-block;
+    width: 70px;
+    height: 25px;
+    background-color: #ff5000;
+    line-height: 25px;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+}
+#c-3{
+    height: 26px;
+    background-color: #ffe4db;
+    color: #ff4400;
+    font-size: 12px;
+    line-height: 26px;
+    text-align: center;
+}
+#c-3 > i{
+    padding-left: 30px;
+    font-size: 13px;
+    cursor: pointer;
+}
+#c-4{
+    height:24px;
+    margin-top: 5px;
+}
+#c-4-menu > li{
+    list-style: none;
+    float: left;
+    font-size: 12px;
+    padding-left: 15px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+#c-4-menu > li:hover{
+    color: #ff4200;
+    text-decoration: underline;
+}
+#c-5{
+    height: 65px;
+    font-size: 11px;
+    margin-top: 10px;
+}
+#c-5 > span{
+    display: inline-block;
+    margin-bottom: 7px;
+    cursor: pointer;
+}
+#c-5 span:hover{
+    color: #ff4200;
+}
+#c-4-menu > :first-child{
+    color: #ff4200;
+    text-decoration: underline;
+}
+#c-5 > :first-child{
+    color: #ff4200;
+}
+#c-6{
+    margin-top: -13px;
+    position: relative;
+}
+#c-6 > table{
+    width: 240px;
+    height: 150px;
+    text-align: center;
+    font-size: 13px;
+    /* color: #333; */
+    cursor: pointer;
+    /* border-color: rgb(255, 254, 254); */
+    background-color: #f4f4f4;
+}
+.bianse:hover{
+    color: #ff4200;
+}
+#c-7{
+    height: 30px;
+    margin-top: 15px;
+}
+#c-7 > :first-child{
+    color: #3c3c3c;
+    font-size: 14px;
+}
+#c-7 > :last-child{
+    color: #3c3c3c;
+    font-size: 12px;
+    float: right;
+    cursor: pointer;
+}
+#gengduo-arrow{
+    font-size: 10px;
+}
+#c-8 > img{
+    width: 32px;
+    margin-right: 10px;
+}
+ 
