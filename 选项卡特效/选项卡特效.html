@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #container{
+        width: 300px;
+        margin: 0px auto;
+        margin-top: 100px;
+    }
+    #menu{
+        width: 100%;
+        height: 40px;
+    }
+    #menu>li{
+        list-style: none;
+        float: left;
+        width: 100px;
+        background-color: rgb(53, 120, 184);
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        cursor: pointer;
+    }
+    #menu>.active{
+        color: #fff;
+        background-color: deeppink;
+    }
+    #content>div{
+        width: 100%;
+        height: 200px;
+        background-color: rgb(30, 206, 59);
+        display: none;
+    }
+    #content>.selected{
+        display: block;
+    }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <ul id="menu">
+            <li class="active">HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+        <div id="content">
+            <div class="selected">我是html教程</div>
+            <div>我是css教程</div>
+            <div>我是js教程</div>
+        </div>
+    </div>
+    <script>
+        var oMenu = document.getElementById('menu');
+        var aLi = oMenu.getElementsByTagName('li');
+        var oContent = document.getElementById('content');
+        var aDiv = oContent.getElementsByTagName('div');
+        for(var i = 0;i<aLi.length;i++){
+            aLi[i].index = i;
+            aLi[i].onclick = function(){
+                for(var j = 0;j<aLi.length;j++){
+                    aLi[j].className = '';
+                    aDiv[j].className = '';
+                }
+                //给当前点击项加class
+                this.className = 'active';
+                aDiv[this.index].className = 'selected';
+            }
+        }
+    </script>
+</body>
+</html>

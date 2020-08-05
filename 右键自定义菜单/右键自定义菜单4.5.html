@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        /* 整体样式 */
+        #menu{
+            background-color: #ccc;
+            width: 120px;
+            border-radius: 5px;
+            display: none;
+            position: absolute;
+        }
+        /* 每个li的样式 */
+        li{
+            list-style: none;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+        }
+        /* li里的白线样式 */
+        #menu-list{
+            border-bottom: 1px solid #fff;
+        }
+        /* 鼠标hover时 */
+        li:hover{
+            background-color: aqua;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <ul id="menu">
+        <li>打开</li>
+        <li id="menu-list">下载</li>
+        <li>分享</li>
+        <li>移动到</li>
+        <li id="menu-list">复制到</li>
+        <li id="menu-list">重命名</li>
+        <li>删除</li>
+    </ul>
+    <script>
+        var oMenu = document.getElementById('menu');
+        document.oncontextmenu = function(event){
+            event.preventDefault();
+            oMenu.style.display = 'block';
+            var top = event.clientY;
+            var left = event.clientX;
+            oMenu.style.top = top + 'px';
+            oMenu.style.left = left + 'px';
+        }
+        document.onclick = function(){
+            oMenu.style.display = "none";
+        }
+        //返回类数组，只有lenth属性，没有别的真正的数组的方法
+        var aLi = document.getElementsByTagName('li');
+        for(var i=0;i<aLi.length;i++){
+            aLi[i].onclick = function(){
+                console.log(this.innerHTML);
+            }
+        }
+    </script>
+</body>
+</html>

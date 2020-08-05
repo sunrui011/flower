@@ -1,0 +1,313 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/* 顶栏开始 */
+.big{
+    background-color: black;
+    height: 40px;
+}
+.small{
+    width: 1200px;
+    margin: 0 auto;
+    font-size: 12px;
+    /* position: relative; */
+}
+.small a:hover{
+    color: rgba(248, 245, 245, 0.911);
+}
+.left-list a{
+   color: white;
+   line-height: 40px;
+   text-decoration: none;
+}
+.left-list span{
+    color: white;
+}
+.right-list a{
+    color: white;
+   line-height: 40px;
+   text-decoration: none;
+}
+.right-list span{
+    color: white;
+}
+.left-list{
+    float:left;
+}
+.right-list{
+    float: right;
+}
+/* 顶栏结束 */
+/* 小米金融栏开始 */
+.logo1{
+    height:100px;
+    background-color: #F7F7F7;
+    /* margin-left: 150px; */
+    position: relative;
+}
+/* .picture-logo{
+    position: relative;
+} */
+.picture-logo1{
+    position: absolute;
+    left:150px;
+}
+.picture-logo a{
+    display: block;
+    padding-left: 150px;
+    padding-top: 20px;
+}
+/* .two{
+    position: relative;
+} */
+.navigation{
+    display: inline-block;
+    float: right;
+    margin-top: -20px;
+    margin-right: 150px;
+}
+.navigation a{
+    text-decoration: none;
+    color: black;
+}
+.navigation a:hover{
+    color: red;
+}
+.navigation li{
+     list-style-type: none;
+     float: left;
+     padding: 0 20px;
+}
+/* 小米金融栏结束 */
+/* 背景大图片开始 */
+.background{
+    /* position: relative; */
+    background-image: url(picture.jpg);
+    height: 640px;
+   background-position: center center;
+}
+.xiaomi{
+
+    color:white;
+    font-size:54px;
+    text-align: center;
+    padding-top: 193px;
+}
+.download{
+    /* display: inline-block;
+    text-decoration: none; */
+    background-color: #F93F2B;
+    padding:18px 30px;
+    color: white;
+    width: 261.02px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 4px;
+    margin-top: 36px;
+}
+/* 主要内容开始 */
+.content{
+    width: 1140px;
+    height: 452px;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    margin-top: -80px;
+    background-color: white;
+    padding: 10px 30px;
+    padding: 30px;
+}
+.list{
+    width: 360px;
+    list-style-type: none;
+    /* background-color: orange; */
+}
+.list a{
+    text-decoration: none;
+    color: white;  
+}
+.list-img{
+    height: 180px;
+    background: url(bc1.png);
+    background-size: 360px 180px;
+    position: relative;
+}
+.list-img h2{
+    padding-top:40px;
+    line-height: 33px;
+    font-size: 33px;
+    padding-left: 30px;
+    font-weight: 400px;
+}
+.list-img p{
+    font-size: 33px;
+    margin-top: 15px;
+    margin-left: 30px;  
+}
+.content1 li{
+  float: left;
+}
+.write1{
+    color: black;
+    background-color:white;
+    margin-left: 18px;
+    margin-top: 20px;
+    padding: 10px 25px;
+}
+.red{
+    color: #EA5600;
+}
+.blue{
+    color: #4481c8;
+}
+.list-more{
+    border-top: 1px solid #ececec;
+    font-size: 16px;
+    color: #fd3011;
+    text-align: center;
+    margin: 30px 0px 10px;
+    padding-top: 10px;
+    height: 62px;
+    line-height: 62px;
+}
+.list2{
+    list-style-type: none;
+}
+.list2 a{
+    text-decoration: none;
+}
+.list-img2{
+    height: 180px;
+    background: url(bc2.png);
+    background-size: 360px 180px;
+    position: relative;
+}
+.list-img2 h2{
+    padding-top:40px;
+    line-height: 33px;
+    font-size: 33px;
+    padding-left: 30px;
+    font-weight: 400px;
+    color: white;
+}
+.list-img2 p{
+    font-size: 33px;
+    margin-top: 15px;
+    margin-left: 30px;  
+    color: white;
+}
+.list3{
+    list-style-type: none;
+}
+.list3 a{
+    text-decoration: none;
+}
+.list-img3{
+    height: 180px;
+    background: url(bc3.png);
+    background-size: 360px 180px;
+    position: relative;
+}
+.list-img3 h2{
+    padding-top:40px;
+    line-height: 33px;
+    font-size: 33px;
+    padding-left: 30px;
+    font-weight: 400px;
+    color: white;
+}
+.list-img3 p{
+    font-size: 33px;
+    margin-top: 15px;
+    margin-left: 30px;  
+    color: white;
+}
+.write3{
+    color: black;
+    margin-top: 30px;
+    padding-bottom: 10px;
+}
+.green{
+    color: green;
+}
+.list-more3{
+    margin-top: 40px;
+    border-top: 1px solid #ececec;
+    font-size: 16px;
+    color: #fd3011;
+    text-align: center;
+    margin: 30px 0px 10px;
+    padding-top: 10px;
+    height: 62px;
+    line-height: 62px;
+}
+.list{
+    margin-right: 55px;
+    margin-left: 40px;
+}
+.list2{
+    margin-right: 55px;
+}
+/* 主要内容结束 */
+.bottom{
+    width: 1200px;
+    height: 209px;
+    margin: 0 auto;
+    /* background-color: violet; */
+    margin-top: 50px;
+}
+.bottom-left{
+    margin-top: 5px;
+    width: 1200px;
+    float: left;
+    overflow: hidden;
+}
+/* .bottom-right{
+    float: right;
+    margin-right: 0px;
+} */
+.bottom-logo{
+    width: 46px;
+    height: 46px;
+    float: left;
+    margin-right: 18px;
+}
+.small-write a{
+    text-decoration: none;
+    color: #575757;
+    font-size: 16px;
+    display: block;
+    height: 14px;
+    line-height: 14px;
+}
+.small-write li{
+    list-style-type: none;
+    float: left;
+    border-right: 1px solid #575757;
+    padding: 0 8px;
+}
+.about{
+    overflow: hidden;
+    padding:3px 0 7px 0px;
+}
+.contact li{
+    font-size: 12px;
+    color: #6d6d6d;
+}
+.client{
+    color: #575757;
+    font-size: 14px;
+}
+.number{
+    font-size: 26px;
+    color: #e84519;
+}
+.time{
+    font-size: 12px;
+    color: #575757;
+}
+.bottom-right{
+    float: right;
+    margin-right: 10px;
+    margin-top: -30px;
+}
