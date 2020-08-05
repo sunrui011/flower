@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ html,body{
+    height: 100%;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    background-color: #db4d6d;
+    display: flex;
+    /* 沿着主轴方向对齐方式 */
+    justify-content: center;
+    /* 沿着侧轴方向对齐方式 */
+    align-items: center;
+}
+.text{
+    color: white;
+    text-align: center;
+}
+.text h1{
+    font-size: 40px;
+}
+.text h4{
+    opacity: 0.5;
+}
+.monster{
+    width: 110px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: #e55a54;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    animation: jumping 0.8s infinite alternate;
+}
+.monsterblue{
+    width: 110px;
+    height: 100px;
+    border-radius: 20px;
+    /* background-color: #e55a54; */
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    animation: jumping 1.0s infinite alternate;
+
+    background-color: #0c4475;
+     animation-delay: 0.5;
+}
+.monster .eye{
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+}
+.monsterblue .eye{
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+}
+.monster .mouth{
+    width: 30%;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 12px;
+    margin-top: 15px;
+}
+.monsterblue .mouth{
+    background-color: #e55a54;
+    width: 30%;
+    height: 12px;
+    /* background-color: #fff; */
+    border-radius: 12px;
+    margin-top: 15px;
+}
+.monster .eye .eyeball{
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    background-color: #0c4475; 
+    animation: eyemove 1.3s infinite alternate linear; 
+}
+.monsterblue .eye .eyeball{
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    background-color: #e55a54;
+    animation: eyemove 1s infinite alternate linear; 
+}
+/* 眉毛通过微元素 */
+.monster::before, .monster::after{
+    content: '';
+    width: 20%;
+    height: 10px;
+    border-radius: 10px;
+    /* display: block; */
+    background-color: #fff;
+    position: absolute;
+    top: -10px;
+}
+.monsterblue::before, .monsterblue::after{
+    content: '';
+    width: 20%;
+    height: 10px;
+    border-radius: 10px;
+    /* display: block; */
+    background-color: #fff;
+    position: absolute;
+    top: -10px;
+}
+.monster::before{
+    transform: translateX(-20%) rotate(45deg);
+}
+.monster::after{
+    transform: translateX(20%) rotate(-45deg);
+}
+.monsterblue::before{
+    transform: translateX(-20%) rotate(45deg);
+}
+.monsterblue::after{
+    transform: translateX(20%) rotate(-45deg);
+}
+@keyframes jumping{
+    0%{
+        top: 0;
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+    50%{
+        top: 0px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+    100%{
+        top: -50px;
+        box-shadow: 0 120px 20px rgba(0,0,0,0.2);
+    }
+}
+@keyframes eyemove{
+    0%{
+        transform: translate(0%);
+    }
+    10%{
+        transform: translate(0%);
+    }
+    90%{
+        transform: translate(100%);
+    }
+    100%{
+        transform: translate(100%);
+    }
+}
