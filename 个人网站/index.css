@@ -1,0 +1,214 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* 大背景 */
+#left{
+    background: url(background-picture.jpg);
+    width: 500px;
+    height: 900px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+}
+/* 图像 */
+#image img{
+    width: 100px;
+    /* height: 116px; */
+    border-radius: 50%;
+    border:3px solid rgba(255, 255, 255, 0.4) ;
+}
+/* 图像位置 */
+#image{
+    text-align: right;
+    padding-right: 32px;
+    color: rgba(255, 255, 255, 0.5);
+}
+/* 图片下的字体样式 */
+#image h1{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+#image h2{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+/* 列表的样式 */
+.menu{
+    text-align: right;
+    margin-right: 32px;
+    margin-top: 48px;
+}
+.menu-list{
+    margin-bottom: 26px;
+}
+.menu-list a{
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+/* 鼠标hover会变色 */
+.menu-list a:hover{
+    color: #00a8e0;
+}
+/* 主页 */
+#main{
+    margin-left: 500px;
+}
+.main-title{
+    font-size: 24px;
+    margin-bottom: 48px;
+    color: #787878;
+}
+/* Home */
+#Home{
+    padding: 60px 48px;
+    text-align: center;
+}
+#home-title{
+    text-align: left;
+}
+/* About */
+/* #About-title{
+    padding: 64px;
+} */
+#About h4{
+    margin-left: 64px;
+}
+#About p{
+    font-size: 18px;
+    color: #999;
+    margin-left: 20px;
+    text-indent: 2em;
+    margin-right: 20px;
+}
+/* Skill */
+#Skill{
+    padding: 60px 48px;
+}
+#Skill li{
+    list-style-type: square;
+    color: #999;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+/* Campus */
+#Campus{
+    padding: 20px 48px;
+}
+#picture-1{
+    width: 900px;
+    height: 550px;
+    /* margin-bottom: 20px; */
+}
+#picture1 p{
+    color: #999;
+    font-size: 18px;
+    text-align: center;
+    /* margin-top: 5px; */
+}
+.picture{
+    margin-top: 20px;
+}
+/* Picture */
+#Picture{
+    padding: 20px 48px;
+}
+#big{
+    overflow: hidden;
+}
+#big img{
+    width: 300px;
+    height: 350px;
+}
+#mother{
+    float: left;
+}
+#father{
+    float: left;
+    margin-left: 300px;
+}
+#brother{
+    float: left;
+    margin-top: 10px;
+}
+#myself{
+    float: left;
+    margin-left: 300px;
+    margin-top: 10px;
+}
+#friend-1{
+    float: left;
+    margin-top: 10px;
+}
+#brother-1{
+    float: left;
+    margin-left: 300px;
+    margin-top: 10px;
+}
+/* Artical */
+#Artical{
+    padding: 10px 48px;
+}
+#Artical li{
+    margin-bottom: 15px;
+    font-size: 18px;
+    list-style-type: square; 
+    color: #999; 
+}
+#Artical ul{
+    margin-left: 20px;
+}
+#Artical a{
+    text-decoration: none;
+    color: #999;
+} 
+#Artical a:hover{
+    text-decoration: underline;
+    color: #00a8e0;
+}
+/* Music */
+#Music{
+    padding:10px 48px;
+}
+/* Contact */
+#Contact{
+    padding: 10px 48px;
+}
+#name{
+    width: 200px;
+    height: 25px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+#e-mail{
+    width: 200px;
+    height: 25px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+#information{
+    height: 180px;
+    width: 430px;
+    border: 1px solid #ccc;
+    border-radius: 0.4px;
+    margin-bottom: 20px;
+}
+#btn{
+    color: #fff;
+    height: 40px;
+    width: 100px;
+    line-height: 40px;
+    background-color: #00a8e0;
+    border-radius: 4px;
+}
+#btn:hover{
+    background-color: #dc3545;
+}
+
